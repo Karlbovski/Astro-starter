@@ -1,0 +1,78 @@
+/** Global not scoped styling goes here**/
+@use "../abstracts/mediaqueries"as *;
+
+/** 
+  The following is in use in the Starter layout and its for demostration purpose only.
+  Delete all the following when starting a new project and add your own styles, if any !
+  See Astro's Style and CSS options docs to decide how to proceed.
+*/
+
+main {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+main>div {
+  // outline: 1px solid red;
+  min-height: calc(100vh - 16em); // remove footer height
+  width: 34ch;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 0;
+  animation: fade-in .8s ease forwards;
+
+  @include small {
+    width: 48ch;
+  }
+
+  @include tablet {
+    width: 56ch;
+  }
+
+  @include laptop {
+    width: 74ch;
+  }
+}
+
+// header {
+//   position: sticky;
+//   width: 100vw;
+//   display: flex;
+//   justify-content: flex-end;
+//   gap: 1em;
+//   padding: 2em;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   a {
+//     margin: 0;
+//     text-decoration: none;
+//     color: var(--color-300);
+//   }
+// }
+
+// footer {
+//   // position: fixed;
+//   // bottom: 0;
+//   width: 100vw;
+//   height: 4em;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: baseline;
+//   padding: 2em;
+//   font-size: .8rem;
+// }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,29 @@
+/* light */
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 300;
+    src: url('/fonts/static/firasans-light-webfont.woff2') format('woff2'),
+         url('/fonts/static/firasans-light-webfont.woff') format('woff');
+}
+/* regular */
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 400;
+    src: url('/fonts/static/firasans-regular-webfont.woff2') format('woff2'),
+         url('/fonts/static/firasans-regular-webfont.woff') format('woff');
+}
+/* TODO semi-bold */
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 700;
+    src: url('/fonts/static/firasans-bold-webfont.woff2') format('woff2'),
+         url('/fonts/static/firasans-bold-webfont.woff') format('woff');
+}
+/* bold */
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 900;
+    src: url('/fonts/static/firasans-bold-webfont.woff2') format('woff2'),
+         url('/fonts/static/firasans-bold-webfont.woff') format('woff');
+}
+
