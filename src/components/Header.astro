@@ -1,17 +1,6 @@
-
-<script>
-    const navToggle = document.querySelector('[aria-controls="primary-nav"]');
-    if(navToggle != null){
-        navToggle.addEventListener('click', ()=>{
-            const bIsNavOpened = navToggle.getAttribute('aria-expanded');
-            if(bIsNavOpened === "false"){
-                navToggle.setAttribute('aria-expanded', 'true');
-            }else {
-                 navToggle.setAttribute('aria-expanded', 'false');
-            }
-        })
-    }
-</script>
+---
+import ThemeIcon from "./ThemeIcon.astro"
+---
 <header>
     <a href="/" class="logo">
     <img src="/heartbeat.png" alt="logo image" width="45" height="45">
@@ -19,7 +8,8 @@
 
     <button aria-controls="primary-nav" aria-expanded="false">
         <span class="visually-hidden">Menu</span>
-        <img class="icon-menu" src="/images/icon-menu.svg" alt="" >
+        <img class="icon-menu" src="/icon-menu.svg" alt="" >
+        <img class="icon-menu-close" src="/icon-menu-close.svg" alt="" >
     </button>
 
     <nav id="primary-nav">
@@ -27,7 +17,8 @@
             <li><a href="/">home</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
-        </ul>
+            <li><ThemeIcon /></li>
+        </ul>        
     </nav>
 </header>
 
@@ -49,11 +40,11 @@ ul {
 a {
   margin: 0;
   text-decoration: none;
-  color: var(--color-200);
+  color: var(--color-foreground);
 
   &:hover,
   &:focus-visible{
-    color: var(--color-300);
+    color: var(--color-500);
   }
 }
 
@@ -63,13 +54,25 @@ button {
 
 @media (width < 750px){
     button {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    right: 1rem;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        right: 1rem;
+        .icon-menu-close{
+            display: none;
+        }
     }
     nav{
         display: none;
+    }
+
+    [aria-expanded="true"] {
+        .icon-menu-close{
+            display: block;
+        }
+        .icon-menu{
+             display: none;
+        }
     }
 
     [aria-expanded="true"] + nav {
@@ -93,3 +96,17 @@ button {
     }
 }
 </style>
+
+<script>
+    const navToggle = document.querySelector('[aria-controls="primary-nav"]');
+    if(navToggle != null){
+        navToggle.addEventListener('click', ()=>{
+            const bIsNavOpened = navToggle.getAttribute('aria-expanded');
+            if(bIsNavOpened === "false"){
+                navToggle.setAttribute('aria-expanded', 'true');
+            }else {
+                 navToggle.setAttribute('aria-expanded', 'false');
+            }
+        })
+    }
+</script>

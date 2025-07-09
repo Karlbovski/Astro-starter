@@ -40,6 +40,11 @@ html:focus-within {
 
 html {
     font-size: 100%;
+    @include themelight;
+}
+
+html.dark {
+    @include themedark;
 }
 
 /* Set core body defaults */
@@ -53,14 +58,6 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-body.light {
-    @include themelight;
-}
-
-body.dark {
-    @include themedark;
-}
-
 h1,
 h2,
 h3,
@@ -68,8 +65,8 @@ h4,
 h5 {
     margin: 2.1rem 0 1.05rem; // opinionated
     font-family: var(--ff-sans);
-    text-wrap: balance;
     line-height: 1.15; // opinionated
+    text-wrap: balance;
 }
 
 h1 {
@@ -104,9 +101,10 @@ p {
 }
 
 p,
-li{
+li,
+figcaption {
     text-wrap: pretty;
-    max-width: 65ch;
+    // max-width: 65ch;
 }
 
 small,
@@ -127,7 +125,7 @@ a:not([class]) {
 
 pre,
 code {
-    color: var(--color-400);
+    // color: var(--color-400);
     font-family: var(--ff-mono);
 }
 

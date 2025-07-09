@@ -1,4 +1,4 @@
-@use "../abstracts"as *;
+@use "../abstracts"as *; // can be removed if abstracts not used anymore (themes's mixins).
 
 :root {
     --ff-serif: serif;
@@ -18,12 +18,15 @@
     --fw-semi-bold: 700;
     --fw-bold: 900;
 
-
-    /* set light theme as (default) */
-    @include themelight;
-
-    /* set dark-theme based on media preference. Handled by js/modules/theme.js */
-    @media (prefers-color-scheme: dark) {
-        @include themedark;
-    }
+    /** OLD
+    Set dark-theme based on system media preference.
+    **/
+    // @media (prefers-color-scheme: dark) {
+    //     @include themedark;
+    //     color-scheme: dark;
+    // }
+    // @media (prefers-color-scheme: light) {
+    //    @include themelight;
+    //    color-scheme: light;
+    // }
 }
