@@ -1,0 +1,52 @@
+---
+import HMFLayout from "../layouts/HMFLayout.astro";
+---
+
+<HMFLayout title="about">
+  <main class="content-grid">
+    <section>
+      <h1>About Astro</h1>
+      <img class="p1" src="https://unsplash.it/1600/500" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis, natus officia autem libero voluptatum nulla voluptate pariatur vel cupiditate, non explicabo officiis optio maxime labore aliquam iusto porro atque.
+      </p>
+      <p>
+        This paragraph uses the <code>.breakout</code> class. Traditionally, we use
+        a container or wrapper, which we need to close, and then open again, but thanks
+        to grid, and with the recent additions of subgrid to all the evergreen browsers,
+        maybe there's a better way to do things?
+      </p>
+      <p>
+        It has it's downsides, as the code is more complex, and it's not as
+        obvious how it works when we're so used to the old pattern.
+      </p>
+      <p>
+        That said, we shouldn't limit ourselves just because we are used to
+        working in a specific way.
+      </p>
+    </section>
+    <section>
+      <h2>
+        This section has <code>full-width</code> with a different background-color
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+        voluptates vitae reiciendis corporis molestias aspernatur vero eaque
+        obcaecati neque dolores veritatis repudiandae voluptas consectetur
+        voluptatum nobis maiores doloremque, nostrum deleniti!
+      </p>
+      <p>
+        Aspernatur, dignissimos. Quaerat corporis, itaque porro dolore ea a
+        placeat molestiae nihil voluptatem veniam facere, corrupti in vel,
+        voluptates enim soluta sint dolores? Quaerat laboriosam iusto voluptatem
+        accusantium ex alias?
+      </p>
+    </section>
+  </main>
+</HMFLayout>
+
+<style>
+  .p1{
+	padding: 1rem;
+  }
+</style>
