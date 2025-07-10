@@ -1,4 +1,8 @@
-/* Abstracts should contain everything that is not going to be compiled as CSS (i.e. mixins, variables, functions, etc...) */
+/** 
+Abstracts should contain everything that is not going 
+to be compiled as CSS (i.e. mixins, variables, functions, etc...) 
+**/
 @forward "mediaqueries";
-@forward "colors";
 @forward "font-face";
+@forward "theme";
+@forward "variables";
