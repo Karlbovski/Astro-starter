@@ -16,6 +16,8 @@ This starter already includes a very basic `Sass/Scss` architecture that uses **
 
 > The `Sass` pattern/structure used is **not** final and it might change in future releases.
 
+[Astro Docs |  Styles and CSS](https://docs.astro.build/en/guides/styling/)
+
 The `Sass` pattern is inspired by the 7-1 Pattern (7 folders 1 file ) but simplified.
 
 <details>
