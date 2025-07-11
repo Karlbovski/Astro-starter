@@ -19,5 +19,6 @@ const { post } = Astro.props;
     <a href={`/posts/${post.slug}`}>
         <h2>{post.data.title}</h2>
     </a>
+    <p>{post.data.date}</p>
     <p>{post.body}</p>
 </article>
