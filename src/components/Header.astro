@@ -1,5 +1,7 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro"
+
+const hasCMS = false;
 ---
 <header>
     <a href="/" class="logo">
@@ -15,7 +17,7 @@ import ThemeIcon from "./ThemeIcon.astro"
     <nav id="primary-nav">
         <ul>
             <li><a href="/">home</a></li>
-            <li><a href="/posts/">posts</a></li>
+            {hasCMS && <li><a href="/posts/">posts</a></li>}
             <li><a href="/about/">about</a></li>
             <li><a href="#">contact</a></li>
             <li><ThemeIcon /></li>
