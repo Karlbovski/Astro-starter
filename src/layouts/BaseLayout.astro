@@ -5,9 +5,8 @@ import Footer from '../components/Footer.astro';
 interface Props {
 	title?: string;
 	description?: string;
-	useHMF?: boolean;
 }
-const {title = "Default Title", description="Default Description", useHMF=false} = Astro.props;
+const {title = "Default Title", description="Default Description"} = Astro.props;
 ---
 
 <html lang="en">
@@ -20,14 +19,8 @@ const {title = "Default Title", description="Default Description", useHMF=false}
 		<title>{title}</title>
 	</head>
 	<body>
-		{useHMF ? <div class="site">
 		<Header />
 		<slot />
 		<Footer />
-		</div> : 
-		<Header />
-		<slot />
-		<Footer />
-		}
 	</body>
 </html>
