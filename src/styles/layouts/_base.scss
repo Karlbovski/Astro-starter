@@ -2,10 +2,18 @@
 
 /** 
   Global not scoped styling goes here.
+  
   The following is in use in the Starter layout and its for demostration purpose only.
-  Delete all the following when starting a new project and add your own styles, if any !
+  You can delete all the following when starting a new project and add your own styles, if any !
   See Astro's Style and CSS options docs to decide how to proceed.
 **/
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0,1fr);
+}
 
 main {
   opacity: 0;

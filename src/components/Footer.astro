@@ -1,17 +1,29 @@
 ---
-import Social from "./Social.astro"
+import Social from "./Social.astro";
 ---
 
 <footer>
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="withastro" />
+  <Social platform="youtube" username="astrodotbuild" />
+  <span>@2025 Author</span>
 </footer>
 
 <style>
   footer {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--color-foreground);
+    /* border-top: 1px solid var(--color-background); */
+    min-height: 100px;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     gap: 1rem;
-    margin-top: 2rem;
+  }
+  span {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-light);
   }
 </style>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="about">
+  <main class="content-grid">
+    <h1>About Astro</h1>
+    <img class="p1" src="https://unsplash.it/1600/500" alt="" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis,
+      natus officia autem libero voluptatum nulla voluptate pariatur vel
+      cupiditate, non explicabo officiis optio maxime labore aliquam iusto porro
+      atque.
+    </p>
+    <p>
+      This paragraph uses the <code>.breakout</code> class. Traditionally, we use
+      a container or wrapper, which we need to close, and then open again, but thanks
+      to grid, and with the recent additions of subgrid to all the evergreen browsers,
+      maybe there's a better way to do things?
+    </p>
+    <h2>What the actual F!!</h2>
+    <p class="breakout call-to-action">
+      Not sure why, but we could set things up if ever you wanted random text to
+      be full-bleed without bothering with a div or anything on the outside of
+      it as well.
+    </p>
+    <p>
+      Error nulla doloribus ex, eius voluptates saepe, in quae ea nesciunt rem
+      possimus obcaecati consequuntur deleniti. Tempore deleniti deserunt harum,
+      distinctio, culpa atque numquam ducimus repellat fugit iusto eveniet
+      velit.
+    </p>
+    <section>
+      <h2>
+        This section has <code>full-width</code> with a different background-color
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+        voluptates vitae reiciendis corporis molestias aspernatur vero eaque
+        obcaecati neque dolores veritatis repudiandae voluptas consectetur
+        voluptatum nobis maiores doloremque, nostrum deleniti!
+      </p>
+      <p>
+        Aspernatur, dignissimos. Quaerat corporis, itaque porro dolore ea a
+        placeat molestiae nihil voluptatem veniam facere, corrupti in vel,
+        voluptates enim soluta sint dolores?
+      </p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .bg-primary {
+    background-color: var(--color-400);
+  }
+  .call-to-action {
+    padding: 1rem;
+    background: hsla(194, 32%, 66%, 0.15);
+  }
+  .p1 {
+    padding: 1rem;
+  }
+</style>
