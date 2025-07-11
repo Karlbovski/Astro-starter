@@ -3,7 +3,8 @@ backend:
   branch: decap-cms # Branch to update (optional; defaults to master)
 
 media_folder: "src/content/posts/images" # Location where files will be stored in the repo
-public_folder: "src/content/posts/images" # The src attribute for uploaded med
+public_folder: "./images" # The src attribute for uploaded media
+
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
