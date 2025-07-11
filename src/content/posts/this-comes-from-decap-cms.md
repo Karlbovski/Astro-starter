@@ -1,7 +1,7 @@
 ---
 title: This comes from Decap-CMS
 date: July 11, 2025 2:00 PM
-image: ""
+image: src/content/posts/images/johan-mouchet.jpg
 category: events
 author: Bovski
 featured: true
