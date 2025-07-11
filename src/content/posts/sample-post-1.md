@@ -1,6 +1,6 @@
 ---
 author: name
-category: string
+category: category one
 date: 10/07/2025
 featured: true 
 image: ./images/record.jpg
