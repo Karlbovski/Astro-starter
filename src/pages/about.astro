@@ -1,8 +1,8 @@
 ---
-import HMFLayout from "../layouts/HMFLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<HMFLayout title="about">
+<BaseLayout title="about" useHMF={true}>
   <main class="content-grid">
     <section>
       <h1>About Astro</h1>
@@ -43,7 +43,7 @@ import HMFLayout from "../layouts/HMFLayout.astro";
       </p>
     </section>
   </main>
-</HMFLayout>
+</BaseLayout>
 
 <style>
   .p1{
