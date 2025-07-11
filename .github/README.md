@@ -1,4 +1,5 @@
 # Customized starter from Astro Starter Kit: Minimal
+`v. 0.1.1`
 
 ```sh
 # create a new project based on a GitHub repository’s main branch
