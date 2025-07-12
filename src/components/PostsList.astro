@@ -13,10 +13,10 @@ const { posts } = Astro.props;
 
 <style>
     div{
-        display: flex;
-        /* flex-direction: row; */
-        /* align-items: center; */
-        flex-wrap:wrap;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-content: center;
+        gap: 1.5rem;
+        margin-block-end: auto;
     }
 </style>
