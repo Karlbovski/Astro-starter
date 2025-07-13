@@ -13,8 +13,55 @@ Contains:
     box-sizing: border-box;
 }
 
-/* Remove default margin */
-body,
+/* Set core root defaults */
+html {
+    font-size: 100%;
+    @include themelight;
+    font-family: var(--ff-sans);
+    /* Prevent font size inflation */
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    
+    interpolate-size: allow-keywords;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html.dark {
+    @include themedark;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Set core body defaults */
+body{
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.5;
+    font-weight: var(--fw-regular);
+    text-rendering: optimizeSpeed;
+    margin: 0; /* Remove default margin */
+} 
+
 h1,
 h2,
 h3,
@@ -24,51 +71,30 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+    margin-block-end: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+/* Remove list styles on ul, ol elements with a class, 
+which suggests default styling will be removed */
+ul[class],
+ol[class] {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
+h1,h2,h3,h4,h5,
+button, input, label {
+    line-height: 1.1; // opinionated
 }
 
-html {
-    font-size: 100%;
-    @include themelight;
-}
-
-html.dark {
-    @include themedark;
-}
-
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--ff-sans);
-    line-height: 1.5;
-    font-weight: var(--fw-regular);
-    text-rendering: optimizeSpeed;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1,h2,h3,h4,h5 {
+    font-family: var(--ff-sans); // opinionated
     margin: 2.1rem 0 1.05rem; // opinionated
-    font-family: var(--ff-sans);
-    line-height: 1.15; // opinionated
     text-wrap: balance;
 }
 
+/* Styling */
 h1 {
     margin-top: 0;
     font-size: var(--fs-h1);
@@ -97,8 +123,9 @@ h5 {
 
 p {
     font-weight: var(--fw-light);
-    margin-bottom: 1.125rem; // opinionated
+    margin-bottom: 1.1rem; // opinionated
 }
+/* End Styling */
 
 p,
 li,
@@ -117,11 +144,6 @@ small,
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
-
-// a {
-//     // text-decoration: none; // old rule
-//     color: var(--color-fore3);
-// }
 
 pre,
 code {
@@ -150,23 +172,14 @@ select {
     font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
 
 /* utilities */
+
+:target {
+    scroll-margin-block: 16px; /* fallback */
+    scroll-margin-block: 1rlh;
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

@@ -15,7 +15,7 @@ const hasCMS = false;
     </button>
 
     <nav id="primary-nav">
-        <ul>
+        <ul class="base-list" role="list">
             <li><a href="/">home</a></li>
             {hasCMS && <li><a href="/posts/">posts</a></li>}
             <li><a href="/about/">about</a></li>
@@ -33,13 +33,11 @@ header {
     padding: 2em;
 }
 
-ul {    
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul { 
     display: flex;
     gap: 1rem;
 }
+
 a {
   margin: 0;
   text-decoration: none;
