@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import ThemeIcon from "./ThemeIcon.astro";
 import logo from "../assets/heartbeat.png";
+import Social from "./Social.astro";
 const hasCMS = false;
 ---
 
@@ -28,6 +29,14 @@ const hasCMS = false;
       }
       <li><a href="/about/">about</a></li>
       <li><a href="#">contact</a></li>
+      <li>
+        <Social
+          platform="github"
+          username="withastro"
+          useIcon
+          iconClass="fa fa-github"
+        />
+      </li>
       <li><ThemeIcon /></li>
     </ul>
   </nav>
