@@ -1,113 +1,121 @@
 ---
-import ThemeIcon from "./ThemeIcon.astro"
-
+import { Image } from "astro:assets";
+import ThemeIcon from "./ThemeIcon.astro";
+import logo from "../assets/heartbeat.png";
 const hasCMS = false;
 ---
+
 <header>
-    <a href="/" class="logo">
-    <img src="/heartbeat.png" alt="logo image" width="45" height="45" />
-    </a>
+  <a href="/" class="logo">
+    <Image src={logo} alt="logo image" width="45" height="45" />
+  </a>
 
-    <button aria-controls="primary-nav" aria-expanded="false">
-        <span class="visually-hidden">Menu</span>
-        <img class="icon-menu" src="/icon-menu.svg" alt="" >
-        <img class="icon-menu-close" src="/icon-menu-close.svg" alt="" >
-    </button>
+  <button aria-controls="primary-nav" aria-expanded="false">
+    <span class="visually-hidden">Menu</span>
+    <img class="icon-menu" src="/icon-menu.svg" alt="" />
+    <img class="icon-menu-close" src="/icon-menu-close.svg" alt="" />
+  </button>
 
-    <nav id="primary-nav">
-        <ul class="base-list" role="list">
-            <li><a href="/">home</a></li>
-            {hasCMS && <li><a href="/posts/">posts</a></li>}
-            <li><a href="/about/">about</a></li>
-            <li><a href="#">contact</a></li>
-            <li><ThemeIcon /></li>
-        </ul>
-    </nav>
+  <nav id="primary-nav">
+    <ul class="base-list" role="list">
+      <li><a href="/">home</a></li>
+      {
+        hasCMS && (
+          <li>
+            <a href="/posts/">posts</a>
+          </li>
+        )
+      }
+      <li><a href="/about/">about</a></li>
+      <li><a href="#">contact</a></li>
+      <li><ThemeIcon /></li>
+    </ul>
+  </nav>
 </header>
 
 <style lang="scss">
-header {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2em;
-}
+  }
 
-ul { 
+  ul {
     display: flex;
     gap: 1rem;
-}
-
-a {
-  margin: 0;
-  text-decoration: none;
-  color: var(--color-foreground);
-
-  &:hover,
-  &:focus-visible{
-    color: var(--color-500);
   }
-}
 
-button {
-    display: none;
-}
+  a {
+    margin: 0;
+    text-decoration: none;
+    color: var(--color-foreground);
 
-@media (width < 750px){
-    button {
-        display: block;
-        position: absolute;
-        z-index: 10;
-        right: 1rem;
-        .icon-menu-close{
-            display: none;
-        }
+    &:hover,
+    &:focus-visible {
+      color: var(--color-500);
     }
-    nav{
+  }
+
+  button {
+    display: none;
+  }
+
+  @media (width < 750px) {
+    button {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      right: 1rem;
+      .icon-menu-close {
         display: none;
+      }
+    }
+    nav {
+      display: none;
     }
 
     [aria-expanded="true"] {
-        .icon-menu-close{
-            display: block;
-        }
-        .icon-menu{
-             display: none;
-        }
+      .icon-menu-close {
+        display: block;
+      }
+      .icon-menu {
+        display: none;
+      }
     }
 
     [aria-expanded="true"] + nav {
-        display:block;
-        position: absolute;
-        height: 100dvh;
-        inset: 0;
-        width: 80%;
-        margin-left: auto;
-        z-index: 1;
-        background-color: var(--color-400);
-        box-shadow: 0 0 0 100vmax hsla(0, 0%, 0%, 0.178);
+      display: block;
+      position: absolute;
+      height: 100dvh;
+      inset: 0;
+      width: 80%;
+      margin-left: auto;
+      z-index: 1;
+      background-color: var(--color-400);
+      box-shadow: 0 0 0 100vmax hsla(0, 0%, 0%, 0.178);
 
-        ul {
-            margin-top: 20vh;
-            margin-left: 3rem;
-            display: grid;
-            gap: 2rem;
-            font-size: var(--fs-h5);
-        }
+      ul {
+        margin-top: 20vh;
+        margin-left: 3rem;
+        display: grid;
+        gap: 2rem;
+        font-size: var(--fs-h5);
+      }
     }
-}
+  }
 </style>
 
 <script>
-    const navToggle = document.querySelector('[aria-controls="primary-nav"]');
-    if(navToggle != null){
-        navToggle.addEventListener('click', ()=>{
-            const bIsNavOpened = navToggle.getAttribute('aria-expanded');
-            if(bIsNavOpened === "false"){
-                navToggle.setAttribute('aria-expanded', 'true');
-            }else {
-                 navToggle.setAttribute('aria-expanded', 'false');
-            }
-        })
-    }
+  const navToggle = document.querySelector('[aria-controls="primary-nav"]');
+  if (navToggle != null) {
+    navToggle.addEventListener("click", () => {
+      const bIsNavOpened = navToggle.getAttribute("aria-expanded");
+      if (bIsNavOpened === "false") {
+        navToggle.setAttribute("aria-expanded", "true");
+      } else {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 </script>
