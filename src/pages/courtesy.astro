@@ -1,9 +1,5 @@
 ---
 import Offline from "../layouts/Offline.astro";
-//*testing Image in css styles
-import { getImage } from "astro:assets";
-import logo from "../assets/heartbeat.png";
-//*
 interface Props {
   site?: string;
   heroText?: string;
@@ -16,18 +12,12 @@ const {
   heroDescription = "Redirect your site to this page when in maintenance, under construction or offline for some reason. Setup parameters in this page Astro.Props.",
   endTime = "Jul 27, 2025 13:52:00",
 } = Astro.props;
-
-const optimizedBackground = await getImage({ src: logo, format: "avif" });
 ---
 
 <Offline
   title="Courtesy Page"
   description="Site under maintanance. Come back later."
 >
-  <!-- <div
-    style={`background-image: url(${optimizedBackground.src}); height:100vh; width:100%; background-size: cover; background-position: center center; position: fixed; top: 0; z-index: -1;`}
-  >
-  </div> -->
   <main>
     <div id="countdown" class="countdown">
       <div class="countdown__header">
