@@ -1,13 +1,28 @@
 ---
 interface Props {
-	platform?: string;
-	username?: string;
+  platform?: string;
+  username?: string;
+  useIcon?: boolean;
+  iconClass?: string;
 }
-const { platform, username } = Astro.props;
+const { platform, username, useIcon = false, iconClass } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+{
+  useIcon ? (
+    <a href={`https://www.${platform}.com/${username}`} class="social-icon">
+      {" "}
+      <i class={iconClass} />
+    </a>
+  ) : (
+    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+  )
+}
+<!-- <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href="" class="social-icon"> <i class="fa fa-instagram"></i></a> -->
 
 <style>
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
   a {
     padding: 0.5rem 1rem;
     color: var(--color-foreground);
@@ -15,4 +30,21 @@ const { platform, username } = Astro.props;
     text-decoration: none;
     font-size: var(--fs-small);
   }
+  .social-icon {
+    font-size: 1.325rem;
+  }
+
+  /** Example for icons styling :hover */
+
+  /* .fa-github {
+    padding: 10px 14px;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .fa-github:hover {
+    background-color: #5a32a3;
+  } */
 </style>
