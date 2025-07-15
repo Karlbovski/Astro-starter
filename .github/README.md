@@ -6,7 +6,7 @@
 # create a new project based on a GitHub repository’s main branch
 npm create astro@latest -- --template Karlbovski/astro-starter
 # to use a different **branch** name, pass it as part of the --template argument
-npm create astro@latest -- --template <Karlbovski/astro-starter#decap-cms.
+npm create astro@latest -- --template Karlbovski/astro-starter#decap-cms.
 ```
 
 > ## 🚧 This page is under construction.
@@ -32,6 +32,14 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 <div style={`background-image: url(${optimizedBackground.src}); height:100vh; width:100%; background-size: cover; background-position: center center; position: fixed; top: 0; z-index: -1;`} </div>
 
 ```
+
+## Netlify Deploy
+
+- TODO
+
+## Netlify Decap-CMS integration
+
+- TODO
 
 ## Todo
 
