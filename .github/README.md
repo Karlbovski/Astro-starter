@@ -1,6 +1,6 @@
 # Customized starter from Astro Starter Kit: Minimal
 
-`v. 0.1.9`
+`v. 1.0.0`
 
 ```sh
 # create a new project based on a GitHub repository’s main branch
@@ -51,5 +51,3 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
   - meta-tags
   - schemas
 - Markdown advanced rendering
-
-Testing ssh keys

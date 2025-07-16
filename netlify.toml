@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/"
-  to = "/courtesy"
-  status = 302
-  force = true
+  #from = "/"
+  #to = "/courtesy"
+  #status = 302
+  #force = true
