@@ -1,13 +1,13 @@
 ---
 import Offline from "../layouts/Offline.astro";
+import Social from "../components/Social.astro";
+import site from "../data/site.json";
 interface Props {
-  site?: string;
   heroText?: string;
   heroDescription?: string;
   endTime?: string;
 }
 const {
-  site = "www.site-name.com",
   heroText = "Coming Back Soon",
   heroDescription = "Redirect your site to this page when in maintenance, under construction or offline for some reason. Setup parameters in this page Astro.Props.",
   endTime = "Jul 28, 2025 00:00:00",
@@ -23,7 +23,7 @@ const {
       <div class="countdown__header">
         <div id="run">
           <p>
-            <small>{site}</small>
+            <small>{site.name}</small>
           </p>
           <h1>{heroText}</h1>
           <p>{heroDescription}</p>
@@ -34,7 +34,7 @@ const {
           </p>
           <h1>We are live! 🎉</h1>
           <h3>
-            <a href={site} rel="noopener"> {site} </a>
+            <a href={site.name} rel="noopener"> {site.name} </a>
           </h3>
         </div>
       </div>
@@ -53,17 +53,22 @@ const {
         </li>
       </ul>
       <div id="footer" class="countdown__footer">
-        <p>Meanwhile you can find {site} here:</p>
+        <p>Meanwhile you can find {site.name} here:</p>
         <div class="links">
-          <a href="#" rel="noopener" target="_blank" class="social-icon"
-            ><i class="fa fa-envelope"></i></a
+          <a
+            href={`mailto:${site.contacts[0]["primary-email"]}`}
+            class="social-icon"><i class="fa fa-envelope"></i></a
           >
-          <a href="#" rel="noopener" target="_blank" class="social-icon"
-            ><i class="fa fa-github"></i></a
-          >
-          <a href="#" rel="noopener" target="_blank" class="social-icon"
-            ><i class="fa fa-instagram"></i></a
-          >
+          {
+            site.socials.map((social) => (
+              <Social
+                platform={social.platform}
+                username={social.username}
+                useIcon
+                iconClass={social["icon-class"]}
+              />
+            ))
+          }
         </div>
       </div>
     </div>
@@ -168,7 +173,7 @@ const {
   }
 
   .social-icon {
-    font-size: 1.325rem;
+    font-size: 1.6rem;
   }
 
   .hide {
