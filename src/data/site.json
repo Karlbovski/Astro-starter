@@ -1,15 +1,17 @@
 {
-    "name": "astro-starter",
-    "contacts": [
-        {"primary-email": "some@mail.me"}       
-    ],
-    "socials": [
-        { "platform": "youtube",
-          "username": "user-name",
-          "icon-class": "fa fa-youtube"},
-        { "platform": "github",
-          "username": "user-name",
-          "icon-class": "fa fa-github"}
-    ],
-    "address":"address"
+  "name": "astro-starter",
+  "contacts": [{ "primary-email": "some@mail.me" }],
+  "socials": [
+    {
+      "platform": "youtube",
+      "username": "user-name",
+      "icon-class": "fa fa-youtube"
+    },
+    {
+      "platform": "github",
+      "username": "user-name",
+      "icon-class": "fa fa-github"
+    }
+  ],
+  "address": "address"
 }
