@@ -33,11 +33,11 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 
 ```
 
-## Netlify Deploy
+## Netlify
 
 - TODO
 
-## Netlify Decap-CMS integration
+## Netlify + Decap-CMS integration
 
 - TODO
 
