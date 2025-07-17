@@ -1,0 +1,16 @@
+.main-w-sidebar{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap:1em;
+}
+
+.main-w-sidebar > :first-child {
+    flex-basis: 600px;
+    flex-grow: 9999;
+}
+
+.main-w-sidebar > :last-child {
+    flex-basis: 600px;
+    flex-grow: 1;
+}
