@@ -1,0 +1,52 @@
+/** WIP: Do not use!! */
+.reel {
+  --gap: 1rem;
+
+  display: grid;
+  gap: var(--gap);
+  grid-auto-flow: column;
+  /*Align content*/
+  grid-auto-columns: calc(50% - (var(--gap) / 2));
+  /*Or show there's more content*/
+  // grid-auto-columns: 30%;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: var(--gap);
+}
+
+.reel > * {
+  scroll-snap-align: start;
+}
+
+/** WIP: Do not use!!
+Netflix style media scroller
+*/
+.reel-media-scroller,
+.reel-media__group {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.25rem;
+}
+
+.reel-media-scroller {
+  grid-auto-columns: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.reel-media__group {
+  grid-auto-columns: 1fr;
+}
+
+.reel-media__element {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.reel-media__element > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}

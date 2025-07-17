@@ -1,0 +1,63 @@
+/** 
+Stack content grids system.
+Useful for stack content on top of a background (image, gradient, etc..)
+
+
+**/
+.stack-container {
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.stack-container > * {
+    grid-area: stack;
+}
+
+.stack-container--mq {
+    display: grid;;
+    place-items: center;
+    // align-items: center;
+    // place-self: center;
+}
+
+.stack-container--mq > *{
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+/** 
+testing 
+*/
+
+//  .stack-container__background{
+   
+//  }
+
+ .stack-container__foreground{
+    align-content: center;    
+    text-align: center;
+    color: var(--color-600);
+    padding: 1rem;
+    border-radius: 8px;
+ }
+
+@media screen and (min-width: 45em) {
+    stack-container--mq{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stack-container__background{
+        grid-column: 2;
+        align-self: stretch;
+    }
+
+    .stack-container__foreground{
+        grid-column: 1;
+        color: var(--color-100);
+        background-color: var(--color-500);
+        align-self: stretch;     
+        padding: 1rem;
+        text-align: left;
+        border-radius: 0px;
+    }
+}

@@ -1,0 +1,14 @@
+/** 
+Header-Main-Footer
+Basic site-wide responsive grid layout.
+Use it on the <body> or on a site wrapper <div>.
+
+Keep that footer to the bottom, no matter what!
+**/
+.hmf-grid {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0,1fr);
+}
