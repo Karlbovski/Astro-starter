@@ -1,6 +1,6 @@
 # Customized starter from Astro Starter Kit: Minimal
 
-`v. 1.0.1`
+`v. 1.0.2`
 
 ```sh
 # create a new project based on a GitHub repository’s main branch
@@ -43,8 +43,6 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 
 ## Todo
 
-- Site wide data importing
-  Like from a json file or similar.
 - SEO
   - sitemap
   - robot.txt
