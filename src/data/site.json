@@ -1,5 +1,6 @@
 {
   "name": "astro-starter",
+  "version": "1.0.2",
   "contacts": [{ "primary-email": "some@mail.me" }],
   "socials": [
     {

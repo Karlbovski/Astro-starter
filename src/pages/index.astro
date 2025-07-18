@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import site from "../data/site.json";
 ---
 
 <Layout title="homepage">
   <main class="content-grid">
     <div>
-      <h1>Astro Starter 1.0.1</h1>
+      <h1>Astro Starter {site.version}</h1>
       <p>
         Astro is the web framework for building content-driven websites like
         blogs, marketing, and e-commerce. Astro is best-known for pioneering a
