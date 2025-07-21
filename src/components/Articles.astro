@@ -1,0 +1,23 @@
+---
+import Card from "./ArticleCard.astro";
+import { type CollectionEntry } from "astro:content";
+type Props = {
+  articles: CollectionEntry<"articles">[];
+};
+
+const { articles } = Astro.props;
+---
+
+<div>
+  {articles.map((article) => <Card article={article} />)}
+</div>
+
+<style>
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block-end: auto;
+  }
+</style>

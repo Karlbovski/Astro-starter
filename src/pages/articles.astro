@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import List from "../components/Articles.astro";
+const articles = await getCollection("articles");
+---
+
+<Layout title="Articles">
+  <main class="content-grid">
+    <h1>Articles</h1>
+    <!-- {posts.map(post => (
+      <h2>{post.data.title}</h2>
+      <p>{post.data.summary}</p>
+      ))} -->
+    <List articles={articles} />
+  </main>
+</Layout>

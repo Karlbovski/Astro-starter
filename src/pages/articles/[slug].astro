@@ -1,0 +1,51 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+export const getStaticPaths = async () => {
+  const articles = await getCollection("articles");
+  const paths = articles.map((article) => {
+    return {
+      params: {
+        slug: article.slug,
+      },
+      props: {
+        article,
+      },
+    };
+  });
+  return paths;
+};
+
+type Props = {
+  article: CollectionEntry<"articles">;
+};
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+---
+
+<Layout title={article.data.title}>
+  <main class="content-grid">
+    <h1>{article.data.title}</h1>
+    <p>{article.data.date}<span> | {article.data.author}</span></p>
+    <Image src={article.data.image} alt={article.data.title} width={1024} />
+    <section class="full-width my-2">
+      <Content />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .my-2 {
+    margin: 2rem 0;
+  }
+  img {
+    height: 240px;
+    border-radius: 12px;
+
+    @media (min-width: 480px) {
+      height: 480px;
+    }
+  }
+</style>
