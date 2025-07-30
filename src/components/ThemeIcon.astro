@@ -3,7 +3,7 @@
 ---
 
 <button id="themeToggle">
-  <svg width="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
       class="sun"
       fill-rule="evenodd"
@@ -20,6 +20,7 @@
 <style>
   #themeToggle {
     border: 0;
+    padding: 0;
     background: none;
   }
   .sun {
@@ -68,5 +69,7 @@
     localStorage.setItem("theme", isDark ? "dark" : "light");
   };
 
-  document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
+  document
+    .getElementById("themeToggle")
+    ?.addEventListener("click", handleToggleClick);
 </script>
