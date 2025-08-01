@@ -23,7 +23,7 @@ const { platform, username, useIcon = false, iconClass } = Astro.props;
 
 <style>
   a {
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     color: var(--color-foreground);
     background-color: var(--color-background);
     text-decoration: none;
@@ -31,6 +31,8 @@ const { platform, username, useIcon = false, iconClass } = Astro.props;
   }
   .social-icon {
     font-size: 1.6rem;
+    padding: 6px;
+    line-height: 1;
   }
 
   /** Example for icons styling :hover */
@@ -44,6 +46,6 @@ const { platform, username, useIcon = false, iconClass } = Astro.props;
     transition: 0.5s;
   }
   .fa-github:hover {
-    background-color: #5a32a3;
+    background-color: #8360c4;
   } */
 </style>
