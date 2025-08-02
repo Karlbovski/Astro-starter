@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import site from "../data/site.json";
 ---
 
 <Layout title="about">
   <main class="content-grid">
-    <h1>About Astro Starter 1.0.1</h1>
+    <h1>About Astro Starter <span>{site.version}</span></h1>
     <h2>No more containers!</h2>
     <p>
       Testing the <b>.content-grid</b> class on the <b>main</b> element.

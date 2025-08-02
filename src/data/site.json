@@ -1,6 +1,7 @@
 {
   "name": "astro-starter",
-  "version": "1.0.2",
+  "version": "1.0.1",
+  "copy": "Stefano Giorgi",
   "contacts": [{ "primary-email": "some@mail.me" }],
   "socials": [
     {

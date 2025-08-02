@@ -1,43 +1,45 @@
 ---
 import Social from "./Social.astro";
+import site from "../data/site.json";
 ---
 
 <footer>
-  <Social
-    platform="twitter"
-    username="astrodotbuild"
-    useIcon
-    iconClass="fa fa-twitter"
-  />
-  <Social
-    platform="github"
-    username="withastro"
-    useIcon
-    iconClass="fa fa-github"
-  />
-  <Social
-    platform="youtube"
-    username="astrodotbuild"
-    useIcon
-    iconClass="fa fa-youtube"
-  />
-  <span>@2025 Author</span>
+  <div class="socials">
+    <Social
+      platform="twitter"
+      username="astrodotbuild"
+      useIcon
+      iconClass="fa fa-twitter"
+    />
+    <Social
+      platform="github"
+      username="withastro"
+      useIcon
+      iconClass="fa fa-github"
+    />
+    <Social
+      platform="youtube"
+      username="astrodotbuild"
+      useIcon
+      iconClass="fa fa-youtube"
+    />
+  </div>
+  <span><i class="fa fa-copyright"></i> 2025 - present {site.copy}</span>
 </footer>
 
 <style>
   footer {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    /* border-top: 1px solid var(--color-foreground); */
-    /* border-top: 1px solid var(--color-background); */
     min-height: 100px;
+    padding: 1rem;
     background-color: var(--color-background);
     color: var(--color-foreground);
     gap: 1rem;
   }
   span {
-    padding: 0.5rem 1rem;
+    padding: 0rem 1rem;
     font-size: var(--fs-small);
     font-weight: var(--fw-light);
   }
