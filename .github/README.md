@@ -32,16 +32,3 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 <div style={`background-image: url(${optimizedBackground.src}); height:100vh; width:100%; background-size: cover; background-position: center center; position: fixed; top: 0; z-index: -1;`} </div>
 
 ```
-
-## Todo
-
-- Implement Astro icons pipeline
-  - improve performances by including icons `svg` files in build.
-  - remove current icon implementation.
-- Netlify + Decap-CMS integration
-- SEO
-  - sitemap
-  - robot.txt
-  - meta-tags
-  - schemas
-- Markdown advanced rendering
