@@ -1,6 +1,6 @@
 # Customized starter from Astro Starter Kit: Minimal
 
-`v. 1.0.2`
+`v. 1.2.0`
 
 ```sh
 # create a new project based on a GitHub repository’s main branch
@@ -33,16 +33,12 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 
 ```
 
-## Netlify
-
-- TODO
-
-## Netlify + Decap-CMS integration
-
-- TODO
-
 ## Todo
 
+- Implement Astro icons pipeline
+  - improve performances by including icons `svg` files in build.
+  - remove current icon implementation.
+- Netlify + Decap-CMS integration
 - SEO
   - sitemap
   - robot.txt
