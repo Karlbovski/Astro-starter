@@ -1,6 +1,6 @@
 # Customized starter from Astro Starter Kit: Minimal
 
-`v. 1.0.2`
+`v. 1.2.0`
 
 ```sh
 # create a new project based on a GitHub repository’s main branch
@@ -32,20 +32,3 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 <div style={`background-image: url(${optimizedBackground.src}); height:100vh; width:100%; background-size: cover; background-position: center center; position: fixed; top: 0; z-index: -1;`} </div>
 
 ```
-
-## Netlify Deploy
-
-- TODO
-
-## Netlify Decap-CMS integration
-
-- TODO
-
-## Todo
-
-- SEO
-  - sitemap
-  - robot.txt
-  - meta-tags
-  - schemas
-- Markdown advanced rendering
