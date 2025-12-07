@@ -4,63 +4,63 @@ Contains:
 - Some custom rules and preliminary TYPOGRAPHY.
 - Few utility classes /such as .visually-hidden
 **/
-@use "../abstracts"as *;
+@use "../abstracts" as *;
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Set core root defaults */
 html {
-    font-size: 100%;
-    @include themelight;
-    font-family: var(--ff-sans);
-    /* Prevent font size inflation */
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    
-    interpolate-size: allow-keywords;
+  font-size: 100%;
+  @include themelight;
+  // Astro Fonts Experimental
+  font-family: var(--font-roboto);
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  interpolate-size: allow-keywords;
 }
 
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html.dark {
-    @include themedark;
+  @include themedark;
 }
 
 /* Remove all animations, transitions and smooth scroll 
 for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Set core body defaults */
-body{
-    min-height: 100vh;
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    line-height: 1.5;
-    font-weight: var(--fw-regular);
-    text-rendering: optimizeSpeed;
-    margin: 0; /* Remove default margin */
-} 
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+  text-rendering: optimizeSpeed;
+  margin: 0; /* Remove default margin */
+}
 
 h1,
 h2,
@@ -71,97 +71,107 @@ figure,
 blockquote,
 dl,
 dd {
-    margin-block-end: 0;
+  margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a class, 
 which suggests default styling will be removed */
 ul[class],
 ol[class] {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,
-button, input, label {
-    line-height: 1.1; // opinionated
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+label {
+  line-height: 1.1; // opinionated
 }
 
-h1,h2,h3,h4,h5 {
-    font-family: var(--ff-sans); // opinionated
-    margin: 2.1rem 0 1.05rem; // opinionated
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.1rem 0 1.05rem; // opinionated
+  text-wrap: balance;
 }
 
 /* Styling */
 h1 {
-    margin-top: 0;
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
+  margin-top: 0;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
 }
 
 h2 {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
 }
 
 h3 {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
 }
 
 h4 {
-    font-size: var(--fs-h4);
-    font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semi-bold);
 }
 
 h5 {
-    font-size: var(--fs-h5);
-    font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-semi-bold);
 }
 
 p {
-    font-weight: var(--fw-light);
-    margin-bottom: 1.1rem; // opinionated
+  // Astro Fonts Experimantal
+  font-family: var(--font-fira-sans);
+  // opinionated
+  font-weight: var(--fw-light);
+  margin-bottom: 1.1rem;
 }
 /* End Styling */
 
 p,
 li,
 figcaption {
-    text-wrap: pretty;
-    // max-width: 65ch;
+  text-wrap: pretty;
 }
 
 small,
 .text_small {
-    font-size: var(--fs-small);
-    // add var(--fw-tbd)
+  font-size: var(--fs-small);
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 pre,
 code {
-    // color: var(--color-400);
-    font-family: var(--ff-mono);
+  // color: var(--color-400);
+  font-family: var(--font-jetbrains-mono);
 }
 
 button {
-    all: unset;
-    display: inline-block;
-    cursor: pointer;
-    padding: .25em .5em;
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
 }
 
 /* Make images easier to work with */
 img {
-    max-width: 100%;
-    display: block; // remove the bottom gap
+  max-width: 100%;
+  display: block; // remove the bottom gap
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -169,23 +179,22 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
-
 
 /* utilities */
 
 :target {
-    scroll-margin-block: 16px; /* fallback */
-    scroll-margin-block: 1rlh;
+  scroll-margin-block: 16px; /* fallback */
+  scroll-margin-block: 1rlh;
 }
 
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

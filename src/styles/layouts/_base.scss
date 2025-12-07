@@ -9,15 +9,15 @@
 **/
 
 body {
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(0,1fr);
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 main {
   opacity: 0;
-  animation: fade-in .8s ease forwards;
+  animation: fade-in 0.8s ease forwards;
 }
 
 /* Animations */

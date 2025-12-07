@@ -35,7 +35,9 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 
 ## Todo
 
-- Implement Astro icons pipeline
+- Astro Fonts pipeline implementation
+
+- Astro icons pipeline implementation
   - improve performances by including icons `svg` files in build.
   - remove current icon implementation.
 - Netlify + Decap-CMS integration
