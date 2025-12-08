@@ -2,20 +2,14 @@
 
 `v. 1.2.0`
 
+Usage:
+
 ```sh
 # create a new project based on a GitHub repository’s main branch
 npm create astro@latest -- --template Karlbovski/astro-starter
 # to use a different **branch** name, pass it as part of the --template argument
 npm create astro@latest -- --template Karlbovski/astro-starter#decap-cms.
 ```
-
-> ## 🚧 This page is under construction.
->
-> It will contain details about all the features of this starter and how to use it.
-
-# Dev Snippets
-
-Dev notes while experimenting with Astro's features.
 
 ## Images
 
@@ -33,19 +27,39 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
 
 ```
 
-# TODOS
+## Astro Font
 
-- Astro Fonts pipeline implementation
+`Type: FontFamily[]`
 
-  ~~- First Iteration OK~~
+`Added in: astro@5.7.0`
 
-  - rework scss pipeline
+This experimental feature allows you to use fonts from your filesystem and various font providers (eg. Google, Fontsource, Bunny) through a unified, fully customizable, and type-safe API.
+
+[Docs](https://docs.astro.build/en/reference/experimental-flags/fonts/)
+
+## Astro Icon
+
+Astro Icon is a straightforward icon system for the Astro framework. This guide assumes that you have an existing Astro project.
+
+[Docs](https://www.astroicon.dev/getting-started/)
+
+---
+
+### 🚧 TODOS
+
+~~- Astro Fonts pipeline implementation~~
+
+~~- First Iteration OK~~
 
 ---
 
 - Astro icons pipeline implementation
   - improve performances by including icons `svg` files in build.
   - remove current icon implementation.
+
+---
+
+- Refactor scss pipeline
 
 ---
 
@@ -58,6 +72,10 @@ const optimizedBackground = await getImage({ src: logo, format: "avif" });
   - robot.txt
   - meta-tags
   - schemas
+
+---
+
+- Lighthouse Test and refactor accordingly
 
 ---
 

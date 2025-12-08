@@ -17,8 +17,8 @@ Contains:
 html {
   font-size: 100%;
   @include themelight;
-  // Astro Fonts Experimental
-  font-family: var(--font-roboto);
+  // Astro Fonts pipeline Experimental
+  font-family: var(--font-sans-serif);
   /* Prevent font size inflation */
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -131,9 +131,9 @@ h5 {
 }
 
 p {
-  // Astro Fonts Experimantal
-  font-family: var(--font-fira-sans);
   // opinionated
+  // Astro Fonts pipeline Experimantal
+  // font-family: var(--font-fira-sans);
   font-weight: var(--fw-light);
   margin-bottom: 1.1rem;
 }
@@ -158,7 +158,7 @@ a:not([class]) {
 pre,
 code {
   // color: var(--color-400);
-  font-family: var(--font-jetbrains-mono);
+  font-family: var(--font-monospace);
 }
 
 button {

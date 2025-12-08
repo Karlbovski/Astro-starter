@@ -8,8 +8,8 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.google(),
-        name: "Roboto",
-        cssVariable: "--font-roboto",
+        name: "Instrument Serif",
+        cssVariable: "--font-instrument-serif",
       },
       {
         name: "JetBrains Mono",

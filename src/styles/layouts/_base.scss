@@ -20,6 +20,13 @@ main {
   animation: fade-in 0.8s ease forwards;
 }
 
+/* Testing Astro Font experimental Pipeline */
+
+// p {
+//   font-family: var(--font-serif);
+//   font-size: var(--fs-h5);
+// }
+
 /* Animations */
 @keyframes fade-in {
   0% {
