@@ -1,6 +1,6 @@
 # Customized starter from Astro Starter Kit: Minimal
 
-`v. 1.2.0`
+`v. 1.3.0`
 
 Usage:
 
@@ -44,6 +44,51 @@ Astro Icon is a straightforward icon system for the Astro framework. This guide 
 [Docs](https://www.astroicon.dev/getting-started/)
 
 ---
+
+## CSS Pipeline
+
+### Resets (default)
+
+Contains:
+
+- Reset is based on Andy Bell's modern CSS reset: https://piccalil.li/blog/a-modern-css-reset/ .
+- Some custom rules and preliminary TYPOGRAPHY.
+- Few utility classes /such as .visually-hidden
+
+### Layouts
+
+Base contains Global not scoped styling goes here.
+See Astro's Style and CSS options docs to decide how to proceed.
+
+### Abstracts (default)
+
+Should contain everything that is not going to be compiled as CSS (i.e. mixins, variables, functions, etc...)
+
+#### Media queries mixin (not-default)
+
+> Responsive Brakpoints mixins using min-width -> up
+
+> Some Rules ( assure Mobile First design )
+
+Min-Width: Refers to everything greater than or equal to the amount given.
+Max-Width: Refers to everything less than or equal to the amount given.
+
+Use relative units ( 100% = 1 em ~= 16px ~= 14pt )
+
+Extra small devices (portrait phones, less than 576px) have no media query since this is the default ( like in Bootstrap ).
+
+Implementation example :
+@include lg {
+max-width: 90vw;
+margin: $card-base-margin auto;
+}
+Know ISSUES:
+SyntaxError : If a specific phone(i.e. 320px) needs to be targeted, i can use the custom device mixin, r-minwidth().
+
+#### Typography
+
+Font Families implemented trough Astro Font experimental pipeline.
+Type scales from [type-scale.com](https://type-scale.com)
 
 ### 🚧 TODOS
 

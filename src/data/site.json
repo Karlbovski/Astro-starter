@@ -2,17 +2,13 @@
   "name": "astro-starter",
   "version": "1.0.1",
   "copy": "Stefano Giorgi",
+  "url": "https://astro-starter.com",
   "contacts": [{ "primary-email": "some@mail.me" }],
   "socials": [
     {
-      "platform": "youtube",
-      "username": "user-name",
-      "icon-class": "fa fa-youtube"
-    },
-    {
       "platform": "github",
-      "username": "user-name",
-      "icon-class": "fa fa-github"
+      "username": "withastro",
+      "icon-name": "github"
     }
   ],
   "address": "address"

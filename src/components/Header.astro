@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import site from "../data/site.json";
 import ThemeIcon from "./ThemeIcon.astro";
 import Social from "./Social.astro";
 const hasCMS = false;
@@ -60,10 +61,10 @@ const hasCMS = false;
       <li><a href="#">contact</a></li>
       <li>
         <Social
-          platform="github"
-          username="withastro"
+          platform={site.socials[0].platform}
+          username={site.socials[0].username}
           useIcon
-          iconClass="fa fa-github"
+          iconName={site.socials[0]["icon-name"]}
         />
       </li>
       <li><ThemeIcon /></li>
